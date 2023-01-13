@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script>
+      var x;
+      function win_open() {
+        // window.open(
+        //   "C:\\Users\\parth\\Desktop\\urvashi\\React JS batch\\React_Js 11.00 to 12.30 2_jan_batch\\advanced_Js\\Dom&Bom\\01_WindowObject.html"
+        // );
+        x = window.open("https://www.w3schools.com/js/js_htmldom.asp");
+      }
+      function win_close() {
+        // window.close();
+        x.close();
+      }
+    </script>
+  </head>
+  <body>
+    <!-- 
+        window object -> alert(), prompt(), confirm(), open(), close()
+     -->
+    <button id="btn1" onclick="win_open()">Click Here to Open</button>
+    <button id="btn2" onclick="win_close()">Click Here to close</button>
+  </body>
+</html>
