@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="form_valid_onblur.js"></script>
+    <script src="form_valid_keyup.js"></script>
+    <script src="form_valid_btnclick.js"></script>
+    <style>
+      span {
+        color: red;
+      }
+    </style>
+  </head>
+  <body>
+    <form action="" name="form1" method="get">
+      <table border="1">
+        <!-- first name -->
+        <tr>
+          <td>First name</td>
+          <td>
+            <input
+              type="text"
+              id="fname"
+              onblur="return fname_check(this,'msg')"
+              onkeyup="return check_reg_ex_fname(this,'name_error')"
+            />
+            <span id="msg"></span>
+            <span id="name_error"></span>
+          </td>
+        </tr>
+        <!-- last name -->
+        <tr>
+          <td>Last name</td>
+          <td>
+            <input
+              type="text"
+              id="lname"
+              onblur="return lname_check(this, 'msg1')"
+              onkeyup="return check_reg_ex_fname(this,'name_error1')"
+            />
+            <span id="msg1"></span>
+            <span id="name_error1"></span>
+          </td>
+        </tr>
+        <!-- mobile number -->
+        <tr>
+          <td>Mobile No</td>
+          <td>
+            <input
+              type="text"
+              id="mno"
+              maxlength="10"
+              onblur="return mno_check(this,'mno_m')"
+              onkeyup="return check_mno_reg_ex(this, 'mno_error')"
+            />
+            <span id="mno_m"></span>
+            <span id="mno_error"></span>
+          </td>
+        </tr>
+        <!-- email id -->
+        <tr>
+          <td>Email</td>
+          <td>
+            <input
+              type="text"
+              id="mail"
+              onblur="return mail_check(this, 'mail_msg')"
+              onkeyup="return check_mail_exp(this, 'mail_error')"
+            />
+            <span id="mail_msg"></span>
+            <span id="mail_error"></span>
+          </td>
+        </tr>
+        <tr>
+          <td colspan="2">
+            <input
+              type="submit"
+              name=""
+              id=""
+              value="Check Validation"
+              onclick="return check_btn_value()"
+            />
+          </td>
+        </tr>
+      </table>
+    </form>
+  </body>
+</html>
