@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      span {
+        color: red;
+      }
+    </style>
+    <script>
+      function form_valid() {
+        let fname = document.getElementById("fname").value;
+        if (fname == "") {
+          document.getElementById("msg").innerHTML = "Enter name";
+          return false;
+        }
+      }
+
+      function fname_check(e, spanid) {
+        if (e.value == "") {
+          document.getElementById(spanid).innerHTML = "Enter name";
+          return false;
+        } else {
+          document.getElementById(spanid).innerHTML = "";
+          return false;
+        }
+      }
+      function fname_reg_check(e, spanid) {
+        let reg_fname = /^[a-zA-Z]*$/;
+        if (e.value.match(reg_fname)) {
+          document.getElementById(spanid).innerHTML = "";
+          return false;
+        } else {
+          document.getElementById(spanid).innerHTML = "Digits not allowed";
+          return false;
+        }
+      }
+    </script>
+  </head>
+  <body>
+    <form action="" method="get" name="form1">
+      <input
+        type="text"
+        name=""
+        id="fname"
+        placeholder="Enter Name"
+        onblur="return fname_check(this,'msg')"
+        onkeyup="return fname_reg_check(this,'error_msg')"
+      />
+      <span id="msg"></span>
+      <span id="error_msg"></span>
+      <br /><br />
+      <input type="submit" value="Click Here" onclick="return form_valid()" />
+    </form>
+  </body>
+</html>
