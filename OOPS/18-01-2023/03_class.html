@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <!-- what is  class ???
+         - block of logical code
+         - collection of different type of data.
+    -->
+    <p id="p1"></p>
+    <script>
+      class Myclass {
+        constructor(fullname) {
+          console.log("====================================");
+          console.log(fullname);
+          console.log("====================================");
+        }
+      }
+
+      var dispdata = new Myclass("Ved");
+
+      class fullnameData {
+        constructor(fname, mname, lname) {
+          console.log("====================================");
+          console.log(fname + " " + mname + " " + lname);
+          console.log("====================================");
+        }
+      }
+      var dispFullname = new fullnameData("Ajay", "P", 21);
+    </script>
+  </body>
+</html>

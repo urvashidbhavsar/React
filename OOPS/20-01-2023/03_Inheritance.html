@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      // class
+      // {
+      //     constructor(){
+
+      //     }
+      // }
+      function Animals(name, color) {
+        this.name = name;
+        this.color = color;
+      }
+
+      Animals.prototype.details = function () {
+        return this.name + "" + this.color + " " + this.type;
+      };
+
+      function voice(name, color, type) {
+        // inheritance
+        Animals.call(this, name, color);
+
+        this.type = type;
+      }
+
+      voice.prototype = new Animals();
+      voice.prototype.constructor = new voice();
+
+      var a = new voice("dog", "black", "bark");
+
+      console.log("====================================");
+      console.log(a);
+      console.log(a.details());
+      console.log("====================================");
+    </script>
+  </body>
+</html>

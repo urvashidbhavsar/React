@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      function emp(first, last, sal, age, doj) {
+        this.first = first;
+        this.last = last;
+        this.sal = sal;
+        this.age = age;
+        this.doj = doj;
+      }
+
+      //   fullname is randomly given name
+      emp.prototype.fullname = function () {
+        return this.first + " " + this.last;
+      };
+
+      emp.prototype.otherinfo = function () {
+        return this.sal + " " + this.age + "" + this.doj;
+      };
+
+      var employee = new emp("abc", "xyz");
+      console.log(employee.fullname());
+
+      var empinfo = new emp("", "", "25000", "25", "21-11-2022");
+      console.log(empinfo.otherinfo());
+    </script>
+  </body>
+</html>

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <p id="p1"></p>
+    <!-- class is a collection of multiple data
+        
+        used class keyword to create class,
+    -->
+    <script>
+      class myclass {
+        constructor(fname) {
+          this.fname = fname;
+          console.log(fname);
+        }
+      }
+
+      var my_class = new myclass("Rupali");
+      console.log(my_class);
+      console.log(new myclass("rupali"));
+
+      class Person {
+        constructor(fname, lname, dob, age, address) {
+          this.fname = fname;
+          this.lname = lname;
+          this.dob = dob;
+          this.age = age;
+          this.address = address;
+          //   console.log(
+          //     fname + " " + lname + " " + dob + " " + age + " " + address
+          //   );
+          document.getElementById("p1").innerHTML =
+            fname + " " + lname + " " + dob + " " + age + " " + address;
+        }
+      }
+
+      var p = new Person("Ved", "Patel", "20-11-2000", 20, "surat");
+      console.log(p);
+      //   document.getElementById("p1").innerHTML =
+      //     p.fname + " " + p.lname + " " + p.dob + " " + p.age + " " + p.address;
+    </script>
+  </body>
+</html>

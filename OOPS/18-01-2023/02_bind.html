@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      let person = {
+        firstname: "Rohan",
+        lastname: "Patel",
+        age: 21,
+        fullname: function () {
+          return firstname + "" + lastname;
+        },
+      };
+      console.log(person);
+
+      let newPerson = {
+        firstname: "Ved",
+        lastname: "patel",
+        fullname1: function () {
+          return firstname + "" + lastname;
+        },
+      };
+
+      var fullname = person.fullname.bind(newPerson);
+      console.log(newPerson);
+
+      //   var fullname1 = newPerson.fullname1.bind(person);
+      //   console.log(person);
+
+      console.log(newPerson.firstname + "" + newPerson.lastname);
+
+      let animals = {
+        Aname: "Dog",
+        Acolor: "white",
+        height: "2ft",
+        full_infor: function () {
+          return Aname + " " + Acolor;
+        },
+      };
+
+      let otherAnimal = {
+        Aname: "Cat",
+        Acolor: "Black",
+      };
+      console.log(otherAnimal);
+
+      var disp = animals.full_infor.bind(otherAnimal);
+      console.log(otherAnimal);
+    </script>
+  </body>
+</html>
