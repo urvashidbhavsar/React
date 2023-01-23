@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <p id="p1"></p>
+    <p id="p2"></p>
+    <script>
+      class person {
+        constructor() {
+          var fname;
+          var sal;
+        }
+
+        getfname(fname) {
+          this.fname = fname;
+          return fname;
+        }
+        setfname(fname) {
+          console.log(fname);
+          document.getElementById("p1").innerHTML = fname;
+        }
+
+        getSal(sal) {
+          this.sal = sal;
+          return sal;
+        }
+
+        setSal(sal) {
+          console.log(sal);
+          document.getElementById("p2").innerHTML = sal;
+        }
+      }
+
+      var per = new person();
+      per.setfname("Ved");
+      var person_fname = per.getfname();
+
+      per.setSal(25555);
+      var person_sal = per.getSal();
+      //   console.log(person_fname);
+      //   document.getElementById("p1").innerHTML = person_fname;
+    </script>
+  </body>
+</html>

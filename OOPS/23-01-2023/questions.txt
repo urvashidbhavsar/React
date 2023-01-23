@@ -1,0 +1,54 @@
+What is class?
+-> class is collection of data. 
+
+syntax : 
+    class class_name{
+        constructor(parameter){   // directly pass function_name
+
+        }
+    }
+
+    var class_disp = new class_name();
+
+what is prototype?
+-> it is in-built object functionality.
+
+syntax :
+fullName => create randomly name
+
+class_name.prototype.fullName = function(){
+    return statements;
+}
+
+what is inheritance??
+-> functionality received from parent class.
+
+class a{
+    constructor(fn, ln){
+
+    }
+}
+class b{
+    a.call() -> it perform interitance in class
+    constructor(fn,ln,sal){
+
+    }
+}
+
+what is encapsulation??
+-> bind data / wrap data
+-> use getter and setter method.
+-> use get and set word before function/methods.
+
+what is static method ??
+-> used static keyword to make static method.
+-> always created in class.
+-> not used in object.
+
+what is polymorphism??
+-> many form.
+-> create function with same name but different signature / parameter.
+-> extends keyword to make interitance - polymorphism.
+
+
+

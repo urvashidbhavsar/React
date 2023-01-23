@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <p id="p1"></p>
+    <p id="p2"></p>
+    <p id="p3"></p>
+    <script>
+      class Birds {
+        constructor(b_name) {
+          this.b_name = b_name;
+          //   console.log(b_name);
+        }
+        static msg() {
+          var a = "hello world";
+          console.log(a);
+          return a;
+        }
+        static msg1() {
+          var b = "Good Morning";
+          console.log(b);
+          return b;
+        }
+      }
+
+      //   var b = new Birds("abc");
+      //   console.log(b.msg());
+      var b = new Birds("abc");
+      document.getElementById("p1").innerHTML = b.b_name;
+      document.getElementById("p2").innerHTML = Birds.msg();
+      document.getElementById("p3").innerHTML = Birds.msg1();
+    </script>
+  </body>
+</html>
