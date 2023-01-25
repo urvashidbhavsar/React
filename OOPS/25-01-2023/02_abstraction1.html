@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      function Animal() {
+        this.AnimalColor = AnimalColor;
+        throw new Error("wrong");
+      }
+      function Dog(AnimalColor) {
+        this.AnimalColor = AnimalColor;
+      }
+      Dog.prototype = Object.create(Animal.prototype);
+
+      var d = new Dog("Black");
+      console.log(d);
+      console.log(d.AnimalColor);
+      console.log(d instanceof Dog);
+      console.log(d instanceof Animal);
+    </script>
+  </body>
+</html>

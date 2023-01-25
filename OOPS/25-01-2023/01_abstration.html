@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      // this code shows error
+      function animal(animalName) {
+        this.animalName = animalName;
+        throw new Error("can not create instance of abstract class");
+      }
+      animal.prototype.AnimalsName = function () {
+        return this.animalName;
+      };
+      var an = new animal();
+      //   console.log(an);
+    </script>
+  </body>
+</html>
